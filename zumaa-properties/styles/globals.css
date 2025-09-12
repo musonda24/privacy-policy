@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: #0f172a;
+}
+
+/* Chat bubble helpers */
+.bubble {
+  @apply rounded-2xl px-4 py-3 text-sm shadow-sm;
+}
+.bubble-left {
+  @apply bg-white border border-slate-200;
+}
+.bubble-right {
+  @apply bg-brand text-white;
+}
+

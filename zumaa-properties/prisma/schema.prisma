@@ -1,0 +1,21 @@
+// Switch provider to "mysql" when using MySQL
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = env("DB_PROVIDER") // "sqlite" or "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Appointment {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  name      String
+  phone     String
+  datetime  String
+  location  String
+  plot      String
+}
+
